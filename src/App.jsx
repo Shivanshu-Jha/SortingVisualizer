@@ -354,7 +354,6 @@ function App() {
         isSorting={isSorting}
         Speed={Speed}
         selectedSorting={selectedSorting}
-
       />
       <SortingInfo selectedSorting={selectedSorting} />
 

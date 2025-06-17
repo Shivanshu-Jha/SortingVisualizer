@@ -4,9 +4,9 @@ import React from 'react'
 
 const Navbar = ({ generate, handleSorting, userInputArr, setUserInputArr, setSpeed, isSorting, reSet, selectedSorting }) => {
     return (
-        <div className='md:flex justify-around items-center mt-12 md:text-lg  text-xs font-semibold'>
+        <div className='md:flex justify-around items-center mt-12 md:text-lg  text-xs font-semibold -translate-y-5 scale-75 md:scale-100'>
 
-            <span className='font-bold text-sm border rounded-lg animate-pulse bg-black font-mono text-[beige] p-1'>SORTING VISUALIZER</span>
+            <span className='font-bold text-sm border rounded-lg animate-pulse bg-black font-mono text-[beige] p-1 ml-4'>SORTING VISUALIZER</span>
 
             {/* input option for entering array */}
             <input value={userInputArr} onChange={(e) => { setUserInputArr(e.target.value) }} type="text" className='border rounded-xl p-2 ml-4 shadow-gray-800 shadow-lg hover:scale-110 transition delay-100 duration-300 ease-in-out focus:border-b-blue-500 inset-shadow-sm inset-shadow-fuchsia-500/50 placeholder:text-slate-500 text-lg' placeholder='Enter Array (in CSV)' />
