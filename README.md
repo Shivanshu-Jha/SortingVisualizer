@@ -1,12 +1,74 @@
-# React + Vite
+# 📊Sorting Visualizer
+A web-based interactive tool to visualize classic sorting algorithms. This project helps users understand the logic, complexity, and behavior of different sorting techniques through real-time animations.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ ## ✖Supported Algorithms
+- 🥇 Bubble Sort: A simple comparison-based algorithm that repeatedly steps through the list.
 
-Currently, two official plugins are available:
+- 🥇 Selection Sort: Divides the list into a sorted and an unsorted part, repeatedly picking the smallest element.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🥇 Insertion Sort: Builds the final sorted array one item at a time.
 
-## Expanding the ESLint configuration
+- 🥇 Merge Sort: A divide-and-conquer algorithm that splits the array and merges it back in order.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🥇 Quick Sort: Picks a 'pivot' element and partitions the array around it.
+
+- 🥇 Heap Sort: Based on a Binary Heap data structure.
+
+## ✨ Key Features
+- Adjustable Speed: Control the animation speed to better observe the step-by-step swaps.
+
+- Custom Array Size: Generate random arrays of varying lengths.
+
+- Color Coding:
+
+Yellow/Blue: Elements currently being compared.
+
+Red: Elements being swapped or moved.
+
+Green: Elements in their final sorted position.
+
+Real-time Logic: Watch how the data moves as the algorithm executes.
+
+
+## 🛠️ Built With
+**Frontend:** React Js
+
+**Styling** Tailwind CSS
+
+**Deployment:** Vercel
+
+
+### Prerequisites
+
+- React Js
+- Tailwind CSS
+- Sorting Algorithms
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/Shivanshu-Jha/SortingVisualizer.git
+cd SortingVisualizer
+```
+
+# Install dependencies
+
+npm install
+
+## 🧠 Algorithm Complexity Reference
+| Algorithm | Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
+| :--- | :--- | :--- | :--- | :--- |
+| **Bubble Sort** | $\Omega(n)$ | $\Theta(n^2)$ | $O(n^2)$ | $O(1)$ |
+| **Selection Sort** | $\Omega(n^2)$ | $\Theta(n^2)$ | $O(n^2)$ | $O(1)$ |
+| **Insertion Sort** | $\Omega(n)$ | $\Theta(n^2)$ | $O(n^2)$ | $O(1)$ |
+| **Merge Sort** | $\Omega(n \log n)$ | $\Theta(n \log n)$ | $O(n \log n)$ | $O(n)$ |
+| **Quick Sort** | $\Omega(n \log n)$ | $\Theta(n \log n)$ | $O(n^2)$ | $O(\log n)$ |
+| **Heap Sort** | $\Omega(n \log n)$ | $\Theta(n \log n)$ | $O(n \log n)$ | $O(1)$ |
+
+
+Author: Shivanshu Jha
+
+  
+
+
