@@ -1,6 +1,9 @@
 # 📊Sorting Visualizer
 A web-based interactive tool to visualize classic sorting algorithms. This project helps users understand the logic, complexity, and behavior of different sorting techniques through real-time animations.
 
+## 🌐 Live Demo
+Check it out here: [sorting-visualizer-zib2.vercel.app](https://sorting-visualizer-zib2.vercel.app)
+
  ## ✖Supported Algorithms
 - 🥇 Bubble Sort: A simple comparison-based algorithm that repeatedly steps through the list.
 
