@@ -1,77 +1,103 @@
-# 📊Sorting Visualizer
-A web-based interactive tool to visualize classic sorting algorithms. This project helps users understand the logic, complexity, and behavior of different sorting techniques through real-time animations.
+# Sorting Visualizer 📊
 
-## 🌐 Live Demo
-Check it out here: [sorting-visualizer-zib2.vercel.app](https://sorting-visualizer-zib2.vercel.app)
+An interactive web app that lets you **watch sorting algorithms run in real time** and compare how they work. Built with React and Tailwind CSS.
 
- ## ✖Supported Algorithms
-- 🥇 Bubble Sort: A simple comparison-based algorithm that repeatedly steps through the list.
+**🌐 Live Demo:**  [sorting-visualizer](https://sorting-visualizer-zib2.vercel.app)
 
-- 🥇 Selection Sort: Divides the list into a sorted and an unsorted part, repeatedly picking the smallest element.
+---
 
-- 🥇 Insertion Sort: Builds the final sorted array one item at a time.
+## ✨ Features
 
-- 🥇 Merge Sort: A divide-and-conquer algorithm that splits the array and merges it back in order.
+- 🎬 **Real-time visualization** of sorting with animated bars
+- 🔢 **Six algorithms:** Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort and Heap Sort
+- 🎛️ **Controls** to generate a new array and run the selected algorithm <!-- add: speed / array size controls if you have them -->
+- 📚 **Algorithm info panel** explaining each algorithm and its complexity
+- 📱 **Responsive, intuitive UI** built with Tailwind CSS
+- ⚡ **Smooth animations** optimized for rendering performance
 
-- 🥇 Quick Sort: Picks a 'pivot' element and partitions the array around it.
+---
 
-- 🥇 Heap Sort: Based on a Binary Heap data structure.
+## 🛠️ Tech Stack
 
-## ✨ Key Features
-- Adjustable Speed: Control the animation speed to better observe the step-by-step swaps.
+| Technology | Usage |
+| --- | --- |
+| React | UI and state management |
+| Vite | Build tool and dev server |
+| Tailwind CSS | Styling and responsive design |
+| JavaScript (ES6+) | Algorithm implementations |
 
-- Custom Array Size: Generate random arrays of varying lengths.
+---
 
-- Color Coding:
+## 📊 Algorithm Complexity
 
-Yellow/Blue: Elements currently being compared.
+| Algorithm | Best | Average | Worst | Space | Stable |
+| --- | --- | --- | --- | --- | --- |
+| Bubble Sort | O(n) | O(n²) | O(n²) | O(1) | Yes |
+| Selection Sort | O(n²) | O(n²) | O(n²) | O(1) | No |
+| Insertion Sort | O(n) | O(n²) | O(n²) | O(1) | Yes |
+| Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) | Yes |
+| Quick Sort | O(n log n) | O(n log n) | O(n²) | O(log n) | No |
+| Heap Sort | O(n log n) | O(n log n) | O(n log n) | O(1) | No |
 
-Red: Elements being swapped or moved.
+---
 
-Green: Elements in their final sorted position.
+## 🧠 How It Works
 
-Real-time Logic: Watch how the data moves as the algorithm executes.
+1. An array of random values is generated and rendered as bars.
+2. The user selects an algorithm and starts the sort.
+3. The algorithm updates the array step by step, with a small delay between steps.
+4. Each update changes React state, so the bars re-render and highlight the elements being compared or swapped.
 
+Each algorithm lives in its own file in `src/algorithms/`, so adding a new one only needs a new file and a way to select it.
 
-## 🛠️ Built With
-**Frontend:** React Js
+---
 
-**Styling** Tailwind CSS
+## 📁 Project Structure
 
-**Deployment:** Vercel
+```
+SortingVisualizer/
+├── index.html
+├── vite.config.js
+├── package.json
+└── src/
+    ├── main.jsx                 # Entry point
+    ├── App.jsx                  # Root component
+    ├── App.css / index.css      # Styles
+    ├── algorithms/              # One file per algorithm
+    │   ├── BubbleSort.jsx
+    │   ├── SelectionSort.jsx
+    │   ├── InsertionSort.jsx
+    │   ├── MergeSort.jsx
+    │   ├── QuickSort.jsx
+    │   └── HeapSort.jsx
+    ├── control/
+    │   └── Visualizer.jsx       # Array display, controls and animation logic
+    ├── navbar/
+    │   └── Navbar.jsx           # Navigation and algorithm selection
+    └── SortingInfo/
+        └── SortingInfo.jsx      # Algorithm explanations
+```
 
+---
+
+## ⚙️ Getting Started
 
 ### Prerequisites
-
-- React Js
-- Tailwind CSS
-- Sorting Algorithms
+- Node.js 18+
 
 ### Installation
 
 ```bash
-# Clone the repo
 git clone https://github.com/Shivanshu-Jha/SortingVisualizer.git
 cd SortingVisualizer
+npm install
+npm run dev
 ```
 
-# Install dependencies
 
-npm install
+### Build for production
 
-## 🧠 Algorithm Complexity Reference
-| Algorithm | Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
-| :--- | :--- | :--- | :--- | :--- |
-| **Bubble Sort** | $\Omega(n)$ | $\Theta(n^2)$ | $O(n^2)$ | $O(1)$ |
-| **Selection Sort** | $\Omega(n^2)$ | $\Theta(n^2)$ | $O(n^2)$ | $O(1)$ |
-| **Insertion Sort** | $\Omega(n)$ | $\Theta(n^2)$ | $O(n^2)$ | $O(1)$ |
-| **Merge Sort** | $\Omega(n \log n)$ | $\Theta(n \log n)$ | $O(n \log n)$ | $O(n)$ |
-| **Quick Sort** | $\Omega(n \log n)$ | $\Theta(n \log n)$ | $O(n^2)$ | $O(\log n)$ |
-| **Heap Sort** | $\Omega(n \log n)$ | $\Theta(n \log n)$ | $O(n \log n)$ | $O(1)$ |
-
-
-Author: Shivanshu Jha
-
-  
-
+```bash
+npm run build
+```
 
